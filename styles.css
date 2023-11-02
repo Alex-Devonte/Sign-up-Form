@@ -57,14 +57,14 @@ body {
 }
 
 #content {
-    display: flex;
-    flex-direction: column;
-    gap: 150px;
-    justify-content: center;
-    padding: 50px;
+    flex: 1;
 }
 
-#content h2 {
+#intro-section {
+    padding: 150px 50px 70px 50px;
+}
+
+#intro-section h2 {
     width: 50%;
 }
 
