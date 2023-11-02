@@ -61,11 +61,12 @@
                     <div class="form-row">
                         <div class="form-group">
                             <label for="password">Password</label>
-                            <input type="password" id="password" class="error">
+                            <input type="password" id="password">
+                            <p class="error-msg">Passwords don't match</p>
                         </div>
                         <div class="form-group">
                             <label for="confirm-password">Confirm Password</label>
-                            <input type="password" id="confirm-password" class="error">
+                            <input type="password" id="confirm-password">
                         </div>
                     </div>
                 </form>
@@ -77,4 +78,23 @@
         </div>
     </div>
 </body>
+<script>
+    let button = document.querySelector('#create-acct-btn');
+    let errorMsg = document.querySelector(".error-msg");
+
+    button.addEventListener('click', function () {
+        let password = document.querySelector('#password');
+        let confirmPassword = document.querySelector('#confirm-password');
+
+        if (password.value != confirmPassword.value) {
+            password.classList.add('error');
+            confirmPassword.classList.add('error');
+            errorMsg.style.display = 'inline';
+        } else {
+            password.classList.remove('error');
+            confirmPassword.classList.remove('error');
+            errorMsg.style.display = 'none';
+        }
+    });
+</script>
 </html>

@@ -131,6 +131,15 @@ input:focus {
     outline: none;
 }
 
+.error {
+    border: 1px solid red;
+}
+
+.error-msg {
+    display: none;
+    color: red;
+}
+
 
 #account-section {
     --main-green: #596D48;
